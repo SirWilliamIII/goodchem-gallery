@@ -1,0 +1,14 @@
+<h2>Strains</h2>
+<div ng-repeat="strain in strains">
+    <div class="row">
+        <div class="col-md-2">
+            <img src="{{ strain.imgUrl }}" alt="">
+        </div>
+        <div class="col-md-10">
+            <h3>{{strain.name}}</h3>
+            <p>{{ strain.class }}</p>
+            <p>{{ strain.effects }}</p>
+            <p>{{strain.description}}</p>
+        </div>
+    </div>
+</div>

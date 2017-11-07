@@ -11,21 +11,22 @@ var app = angular.module("strains", ['ngRoute'])
 			templateUrl: 'strains.html',
 			controller:  'StrainsCtrl'
 		}).when('/contact', {
-			templateUrl: 'main.html'
-		}).otherwise({ redirectTo: '/main' })
+			templateUrl: 'contact.html'
+		}).otherwise({ redirectTo: '/strains' })
 	}])
 
 	.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
-		$http.get('https://secure-scrubland-75502.herokuapp.com/')
+		$http.get('http://denver-pot.herokuapp.com')
 			.then(res => {
 				$scope.main = res.data
 			})
 	}])
 
 	.controller('StrainsCtrl', ['$scope', '$http', function ($scope, $http) {
-		$http.get('https://secure-scrubland-75502.herokuapp.com/').then(function (response) {
-			console.log('weeeeeeeeeeeee')
-			$scope.strains = response.data;
-		});
-	}])
+		$http.get('http://denver-pot.herokuapp.com')
+				.then(res => {
+					console.log('weeeeeeeeeeeee')
+					$scope.strains = res.data;
+				});
+		}])
 

@@ -1,19 +1,41 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="computer">
+<html lang="en" ng-app="strains">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Good Chemistry -- Denver, CO</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
     <link href="./css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/style.css" rel="stylesheet">
 </head>
 <body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
-<script src="./js/bootstrap.min.js"></script>
-<script src="./js/script.js"></script>
+<div class="container">
+    <div class="masthead">
+        <h2 class="text-muted">Good Chemistry</h2>
+        <nav>
+            <ul class="nav nav-justified">
+                <li><a href="#/main">Home</a></li>
+                <li><a href="#/about">About</a></li>
+                <li><a href="#/services">Strains</a></li>
+                <li><a href="#/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div ng-controller="MainCtrl">
+        <div ng-view></div>
+    </div>
+
+    <footer class="footer">
+        <p><a href="http://willcarpenter.site">&copy Will Carpenter Production 2017</a></p>
+    </footer>
+
+</div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
